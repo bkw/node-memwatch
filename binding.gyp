@@ -10,6 +10,13 @@
         'src/init.cc',
         'src/memwatch.cc',
         'src/util.cc'
+      ],
+      'conditions': [
+        ['OS=="mac"', {
+          'xcode_settings': {
+            'OTHER_CFLAGS' : ['-fpermissive']
+          }
+        }]
       ]
     }
   ]
